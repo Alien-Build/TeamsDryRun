@@ -21,6 +21,7 @@ const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
   MicrosoftAppType: "MultiTenant",
 });
 
+
 const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(
   {},
   credentialsFactory
