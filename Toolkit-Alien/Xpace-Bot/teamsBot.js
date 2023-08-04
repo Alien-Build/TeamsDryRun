@@ -19,6 +19,7 @@ class TeamsBot extends TeamsActivityHandler {
     const openai = new OpenAIApi(configuration);
 
   async function runCompletion(txt, context) {
+    console.log("Running completion");
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: txt,
@@ -65,6 +66,11 @@ class TeamsBot extends TeamsActivityHandler {
           break;
         }
         default: {
+          console.log("Running with default case." + "\n\n");
+          console.log("text from user: " + txt + "\n\n");
+          console.log("User: " + context.activity.from.name + "\n\n");
+          console.log("User ID: " + context.activity.from.id + "\n\n");
+          console.log("key: ->" + config.openaiKey + "\n\n");   
           await runCompletion(txt, context);
           break;
         }

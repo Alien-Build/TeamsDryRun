@@ -8,6 +8,5 @@ env/.env.local
 node_modules/
 
 # misc
-.env
 .deployment
 .DS_Store
