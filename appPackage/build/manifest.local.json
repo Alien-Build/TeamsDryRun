@@ -2,13 +2,13 @@
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
     "manifestVersion": "1.16",
     "version": "1.0.0",
-    "id": "fb6c8341-23ac-4f23-805a-4cb032d9db5b",
+    "id": "e64a1c64-6031-4e17-99a1-c2900feef9bf",
     "packageName": "com.microsoft.teams.extension",
     "developer": {
-        "name": "Teams App, Inc.",
-        "websiteUrl": "https://www.example.com",
-        "privacyUrl": "https://www.example.com/termofuse",
-        "termsOfUseUrl": "https://www.example.com/privacy"
+        "name": "Xpace Team | TIVIT",
+        "websiteUrl": "https://www.tivit.com",
+        "privacyUrl": "https://www.tivit.com/termofuse",
+        "termsOfUseUrl": "https://www.tivit.com/privacy"
     },
     "icons": {
         "color": "color.png",
@@ -25,7 +25,7 @@
     "accentColor": "#FFFFFF",
     "bots": [
         {
-            "botId": "dd5a3188-9835-4da6-a52e-fe43dea18b53",
+            "botId": "82ad364e-7753-484b-9f3b-0cc96dbd3c2e",
             "scopes": [
                 "personal",
                 "team",
@@ -56,7 +56,52 @@
     ],
     "composeExtensions": [],
     "configurableTabs": [],
-    "staticTabs": [],
+    "staticTabs": [
+        {
+            "entityId": "conversations",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "sample.app.boards",
+            "name": "Xpace Board",
+            "contentUrl": "https://officedev.github.io/microsoft-teams-app-sample/#/board",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "sample.app.list",
+            "name": "Xpace List",
+            "contentUrl": "https://officedev.github.io/microsoft-teams-app-sample/#/list",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "sample.app.dashboard",
+            "name": "Xpace Dashboard",
+            "contentUrl": "https://officedev.github.io/microsoft-teams-app-sample/#/dashboard",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "sample.app.welcome",
+            "name": "Xpace Services",
+            "contentUrl": "https://officedev.github.io/microsoft-teams-app-sample/#/welcome",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "about",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
     "permissions": [
         "identity",
         "messageTeamMembers"

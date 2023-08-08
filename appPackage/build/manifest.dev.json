@@ -5,10 +5,10 @@
     "id": "f5fae50f-32b9-46ed-8936-158574aa0b8f",
     "packageName": "com.microsoft.teams.extension",
     "developer": {
-        "name": "Teams App, Inc.",
-        "websiteUrl": "https://www.example.com",
-        "privacyUrl": "https://www.example.com/termofuse",
-        "termsOfUseUrl": "https://www.example.com/privacy"
+        "name": "Xpace Team | TIVIT",
+        "websiteUrl": "https://www.tivit.com",
+        "privacyUrl": "https://www.tivit.com/termofuse",
+        "termsOfUseUrl": "https://www.tivit.com/privacy"
     },
     "icons": {
         "color": "color.png",
@@ -56,7 +56,52 @@
     ],
     "composeExtensions": [],
     "configurableTabs": [],
-    "staticTabs": [],
+    "staticTabs": [
+        {
+            "entityId": "conversations",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "sample.app.boards",
+            "name": "Xpace Board",
+            "contentUrl": "https://officedev.github.io/microsoft-teams-app-sample/#/board",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "sample.app.list",
+            "name": "Xpace List",
+            "contentUrl": "https://officedev.github.io/microsoft-teams-app-sample/#/list",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "sample.app.dashboard",
+            "name": "Xpace Dashboard",
+            "contentUrl": "https://officedev.github.io/microsoft-teams-app-sample/#/dashboard",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "sample.app.welcome",
+            "name": "Xpace Services",
+            "contentUrl": "https://officedev.github.io/microsoft-teams-app-sample/#/welcome",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "about",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
     "permissions": [
         "identity",
         "messageTeamMembers"
