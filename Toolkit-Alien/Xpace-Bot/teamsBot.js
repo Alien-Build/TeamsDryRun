@@ -12,7 +12,7 @@ const config = require("./config");
 class TeamsBot extends TeamsActivityHandler {
   constructor() {
     super();
-
+    const messages = new Messages();
     const configuration = new Configuration({
       apiKey: config.openaiKey,
     });
@@ -20,12 +20,27 @@ class TeamsBot extends TeamsActivityHandler {
 
   async function runCompletion(txt, context) {
     console.log("Running completion");
-    const completion = await openai.createCompletion({
-      model: "text-davinci-003",
-      prompt: txt,
-      max_tokens:4000
+    messages.add(new message("user", txt));
+    const auth = new Authentication();
+    const token = await auth.authenticate();
+    
+    const completion = await fetch("https://tvt-app-athenav2-eu-prd.azurewebsites.net/chat/completions", {
+      method: "post",
+      headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + token.access_token,
+      },
+      body: JSON.stringify(messages),
+      })
+      .then((response) => response.json())
+      .then((data) => {         
+          console.log("success: ",data);
+          messages.add(new message("assistant", data.choices[0].message.content))
+      })
+      .catch((error) => {
+          console.log(error);
       });
-    await context.sendActivity(completion.data.choices[0].text + "\n\n" + `Tokens gastos na resposta: ${completion.data.usage.total_tokens}`);
+    await context.sendActivity(completion.choices[0].message.content);
   }
 
     // record the likeCount
