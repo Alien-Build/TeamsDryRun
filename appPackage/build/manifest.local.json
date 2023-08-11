@@ -1,0 +1,110 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.16",
+    "version": "1.0.0",
+    "id": "eaed870d-d5a3-4bb4-97d3-3a9b9a82175c",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Xpace Team | TIVIT",
+        "websiteUrl": "https://www.tivit.com",
+        "privacyUrl": "https://www.tivit.com/termofuse",
+        "termsOfUseUrl": "https://www.tivit.com/privacy"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Xpace-Bot-local",
+        "full": "full name for Xpace-Bot"
+    },
+    "description": {
+        "short": "short description for Xpace-Bot",
+        "full": "full description for Xpace-Bot"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+        {
+            "botId": "b2d75b95-1e73-4f58-ab83-4f7f5b5714a6",
+            "scopes": [
+                "personal",
+                "team",
+                "groupchat"
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": false,
+            "commandLists": [
+                {
+                    "scopes": [
+                        "personal",
+                        "team",
+                        "groupchat"
+                    ],
+                    "commands": [
+                        {
+                            "title": "welcome",
+                            "description": "Resend welcome card of this Bot"
+                        },
+                        {
+                            "title": "learn",
+                            "description": "Learn about Adaptive Card and Bot Command"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "composeExtensions": [],
+    "configurableTabs": [],
+    "staticTabs": [
+        {
+            "entityId": "conversations",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "sample.app.boards",
+            "name": "Xpace Board",
+            "contentUrl": "https://officedev.github.io/microsoft-teams-app-sample/#/board",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "sample.app.list",
+            "name": "Xpace List",
+            "contentUrl": "https://officedev.github.io/microsoft-teams-app-sample/#/list",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "sample.app.dashboard",
+            "name": "Xpace Dashboard",
+            "contentUrl": "https://officedev.github.io/microsoft-teams-app-sample/#/dashboard",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "sample.app.welcome",
+            "name": "Xpace Services",
+            "contentUrl": "https://officedev.github.io/microsoft-teams-app-sample/#/welcome",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "about",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": []
+}
